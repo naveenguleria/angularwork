@@ -1,5 +1,8 @@
 <h1>Posts</h1>
-
+<div *ngIf="errMsg" class="errorMessage">
+  ERROR REPORTED:<br/>
+  {{errMsg?.message}}
+</div>
 <ul>
   <li *ngFor="let post of posts$">
     <a routerLink="">{{ post.title }}</a>

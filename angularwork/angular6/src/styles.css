@@ -12,7 +12,7 @@ body {
     height: 100%;
   }
   #container #content {
-    padding: 30px 50px;
+    padding: 5px 50px;
   }
   #container #content ul {
     list-style-type: none;
@@ -40,4 +40,10 @@ body {
   #container #content ul li ul li a {
     font-size: 1em;
     font-weight: 300;
+  }
+
+  .errorMessage{
+    padding: 20px;
+    background-color: #7c1515;
+    color:#F2F2F2;
   }

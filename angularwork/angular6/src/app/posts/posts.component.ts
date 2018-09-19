@@ -9,12 +9,18 @@ import { DataService } from '../data.service';
 export class PostsComponent implements OnInit {
 
   posts$: Object;
+  errMsg: String;
   
   constructor(private data: DataService) { }
 
   ngOnInit() {
     this.data.getPosts().subscribe(
-      data => this.posts$ = data 
+      data => this.posts$ = data ,
+      (err) => {
+        console.log(err);
+        this.errMsg = err;
+      },
+      () => { console.log("Finished");}
     );
   }
 

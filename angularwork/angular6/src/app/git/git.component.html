@@ -1,0 +1,17 @@
+<h1>Git User</h1>
+<div>
+  <ul>
+    <li>
+      Git Username: <input type="text" [(ngModel)]="userName">&nbsp;<button (click)="getGitUser()">Get Git User</button>
+
+    </li>
+    <li *ngIf="gitUser">
+      
+        Login: {{gitUser?.login}}<br/>
+        <figure class="image is-96x96">
+            <img class="is-rounded" src="{{gitUser?.avatar_url}}">
+          </figure>
+      
+    </li>
+  </ul>
+</div>

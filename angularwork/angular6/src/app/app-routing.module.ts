@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { UsersComponent } from './users/users.component';
 import { DetailsComponent } from './details/details.component';
 import { PostsComponent } from './posts/posts.component';
+import { GitComponent } from './git/git.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,11 @@ const routes: Routes = [
   {
     path: 'posts',
     component: PostsComponent
+  }
+  ,
+  {
+    path: 'gituser',
+    component: GitComponent
   }
 ];
 
