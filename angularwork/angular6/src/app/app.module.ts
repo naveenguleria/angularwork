@@ -11,6 +11,7 @@ import { DetailsComponent } from './details/details.component';
 import { HttpClientModule } from '@angular/common/http';
 import { GitComponent } from './git/git.component';
 import { GitService } from './git/git.service';
+import { SurveyComponent } from './survey/survey.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { GitService } from './git/git.service';
     UsersComponent,
     DetailsComponent,
     GitComponent,
+    SurveyComponent,
     
   ],
   imports: [

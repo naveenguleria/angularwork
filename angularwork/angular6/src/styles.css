@@ -47,3 +47,70 @@ body {
     background-color: #7c1515;
     color:#F2F2F2;
   }
+
+  .txt {
+    height: 28px;
+    position: relative;
+    border: 1px solid #3366FF;
+	border-left: 4px solid #3366FF;
+    background-color: AliceBlue ; 
+    padding: 5px;
+    font-size: 14px;
+}
+
+.btn{
+     display:inline-block;
+     padding:0.7em 1.7em;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.2em;
+    box-sizing: border-box;
+    color:#FFFFFF;
+    background: #3369ff;
+    box-shadow:inset 0 -0.6em 1em -0.35em rgba(0,0,0,0.17),inset 0 0.6em 2em -0.3em rgba(255,255,255,0.15),inset 0 0 0em 0.05em rgba(255,255,255,0.12);
+    text-align:center;
+    position:relative;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  padding: 0;
+}
+
+th {
+  border-bottom: 1px solid #ddd;
+  padding: 15px;
+  text-align: left;
+  vertical-align: middle;
+  background-color: #4CAF50;
+  color: white;
+}
+
+td {
+  border-bottom: 1px solid #ddd;
+  padding: 15px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+tr:hover {background-color: #e4e2e2e8;}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+.stress{
+  color: #6991dd;
+  
+}
+
+.subscript{
+  font-style: italic !important;
+  font-weight: normal !important;
+  color: #8a8b8b;
+}
+
+.img{
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}

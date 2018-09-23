@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular6';
+  data:string;
+
+  sendDataToChild:string;
+
+  constructor(){
+    this.data="me";
+    this.sendDataToChild="CHILD";
+  }
+
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
 
 @Component({
@@ -7,6 +7,11 @@ import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
   styleUrls: ['./sidebar.component.css']
 })
 export class SidebarComponent implements OnInit {
+
+  //Recieve data from parent component
+  @Input() public myParentData;
+  
+
 
   currentUrl: string;
 
@@ -26,5 +31,7 @@ export class SidebarComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  
 
 }

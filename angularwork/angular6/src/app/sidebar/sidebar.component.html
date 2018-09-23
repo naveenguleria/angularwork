@@ -1,19 +1,28 @@
 <nav>
   <ul>
     <li>
-      <a routerLink="" [class.activated]="currentUrl == '/'">
+      <a routerLink="" [class.activated]="currentUrl == '/'" title="List USERS - HTTP">
         <i class="material-icons">supervised_user_circle</i>
       </a>
     </li>
     <li>
-      <a routerLink="posts" [class.activated]="currentUrl == '/posts'">
+      <a routerLink="posts" [class.activated]="currentUrl == '/posts'" title="List POSTS - HTTP">
         <i class="material-icons">message</i>
       </a>
     </li>
     <li>
-      <a routerLink="gituser" [class.activated]="currentUrl == '/gituser'">
+      <a routerLink="gituser" [class.activated]="currentUrl == '/gituser'" title="Get GIT User - HTTP">
         <i class="material-icons">face</i>
       </a>
     </li>
+    <li>
+      <a routerLink="survey" [class.activated]="currentUrl == '/survey'" title="Angular - CONTENTS">
+        <i class="material-icons">assignment</i>
+      </a>
+    </li>
+    <li>
+       <span [ngStyle]="{'color': 'white', 'padding':'5px'}">{{myParentData}}</span>
+    </li>
+    
   </ul>
 </nav>

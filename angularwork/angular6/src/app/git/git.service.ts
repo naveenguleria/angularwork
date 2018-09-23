@@ -13,7 +13,7 @@ export class GitService {
     this.baseUrl="https://api.github.com/users/";
   }
 
-  getGitUser(userName:string):Observable<Object>{
+  getGitUser(userName:string){
     let url = this.baseUrl+userName;
     console.log("GITTTT SERVICE " + url);
     return this.http.get(url);

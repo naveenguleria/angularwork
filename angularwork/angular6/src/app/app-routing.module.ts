@@ -4,6 +4,7 @@ import { UsersComponent } from './users/users.component';
 import { DetailsComponent } from './details/details.component';
 import { PostsComponent } from './posts/posts.component';
 import { GitComponent } from './git/git.component';
+import { SurveyComponent } from './survey/survey.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,11 @@ const routes: Routes = [
   {
     path: 'gituser',
     component: GitComponent
+  }
+  ,
+  {
+    path: 'survey',
+    component: SurveyComponent
   }
 ];
 

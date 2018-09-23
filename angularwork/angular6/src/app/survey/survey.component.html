@@ -1,0 +1,387 @@
+<h1>Angular - TABLE OF CONTENTS</h1>
+<ul>
+  <li>
+
+    <table>
+      <th colspan="3">ANGULAR COMMANDS </th>
+      <tr>
+        <td>1</td>
+        <td>Software needed</td>
+        <td>NODEJS, ANGULAR-CLI, RXJS, VSCODE (EDITOR), GIT (Version Control)
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Install NODEJS</td>
+        <td>
+          <span class="stress">Download from nodejs.org and install</span>
+        </td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Install ANGULARJS (globally)</td>
+        <td>
+          <span class="stress">npm install -g @angular/cli</span>
+        </td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Create ANGULARJS app</td>
+        <td>
+          <span class="stress">ng new my-app</span><br />
+          <span class="stress">ng new my-app --style=scss --routing</span><br />
+          <span class="subscript">(--routing is added because we
+            want a project that has different page URL's)</span>
+        </td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>Development SERVER</td>
+        <td>
+          <span class="stress">cd my-app</span><br />
+          <span class="stress">ng serve | ng serve --open | ng serve -o</span>
+        </td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>Create MODULE</td>
+        <td>
+          <span class="stress">ng generate module module-name</span><br />
+          <span class="stress">ng g m module-name</span>
+        </td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>Create COMPONENT</td>
+        <td>
+          <span class="stress">ng generate component component-name</span><br />
+          <span class="stress">ng g c component-name</span>
+        </td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>Create SERVICE</td>
+        <td>
+          <span class="stress">ng generate service component-name/service-name</span><br />
+          <span class="stress">ng g s component-name/service-name</span>
+        </td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>BUILD</td>
+        <td>
+          <span class="stress">ng build (Development build)</span><br />
+          <span class="stress">ng build --prod</span>
+        </td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td>RUN</td>
+        <td>
+          <span class="stress">ng serve | ng serve --open | ng serve -o</span><br />
+        </td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td>RUN using local http-server</td>
+        <td>
+          <span class="stress">npm install -g http-server</span><br />
+          RUN HTTP SERVER:: <span class="stress"> http-server dist/build-proj</span>
+        </td>
+      </tr>
+    </table>
+  </li>
+  <li>
+    <table>
+      <th>ANGULAR ARCHITECTURE - MODULES</th>
+      <tr>
+        <td><b>ARCHITECTURE</b><br />
+          Every ANGULAR app has ateast one module i.e. ROOT module (App Module). Modules interact & render view in
+          browser.
+          <ol>
+            <li>ANGULAR APP <-> One or more MODULES</li>
+            <li>ANGULAR MODULE <-> One or more COMPONENTS & SERVICES</li>
+            <li>ANGULAR COMPONENT <-> HTML + CLASS</li>
+            <li>ANGULAR SERVICES <-> BUSINESS LOGIC</li>
+          </ol>
+        </td>
+      </tr>
+      <tr>
+        <td><img class="img" src="assets/pics/architecture.jpg"></td>
+      </tr>
+
+      <tr>
+        <td><b>COMPONENT</b><br /></td>
+      </tr>
+      <tr>
+        <td>
+          <img class="img" src="assets/pics/component2.jpg">
+          <img class="img" src="assets/pics/component3.jpg">
+          <img class="img" src="assets/pics/component.jpg">
+        </td>
+      </tr>
+      <tr>
+        <td><b>SERVICES</b><br /></td>
+      </tr>
+      <tr>
+        <td><img class="img" src="assets/pics/services.jpg"></td>
+      </tr>
+    </table>
+
+  </li>
+  <li>
+    <table>
+      <th colspan="3">INTERPOLATION &#123; &#123; &#125; &#125;</th>
+      <tr>
+        <td>1</td>
+        <td>Interpolation Binding</td>
+        <td>
+          &#123; &#123; nameVar &#125; &#125;
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Method Interpolation</td>
+        <td> &#123; &#123; method() &#125; &#125;</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Cannot do assignment</td>
+        <td>&#123; &#123; a = 3+3 &#125; &#125; will not work!!!</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>We cannot access global variables </td>
+        <td>&#123; &#123; window.location.href &#125; &#125; will not work!!!</td>
+      </tr>
+    </table>
+  </li>
+  <li>
+    <table>
+      <th colspan="3">PROPERTY BINDING - Bind value using angular to make ui dynamic</th>
+      <tr>
+        <td>1</td>
+        <td>Interpolation Binding - &#123; &#125; </td>
+        <td>Works only for strings (boolean will not work)
+          &lt;input disabled="&#123; &#123; isDisabled &#125; &#125;"&gt; will not work!!!
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Property Binding [ ] </td>
+        <td> &lt;input [disabled]="isDisabled"&gt; <br />
+          &lt;input [id]="myId"&gt;</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Two-Way Property Binding [( )] </td>
+        <td> &lt;input [(ngModel)]="txtVal-variable"&gt; <br /></td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>bind-attributeName</td>
+        <td>&lt;input bind-disabled="isDisabled"&gt;</td>
+      </tr>
+    </table>
+  </li>
+  <li>
+    <table>
+      <th colspan="3">CLASS BINDING - Bind CSS classes using angular to make ui dynamic</th>
+      <tr>
+        <td>1</td>
+        <td>[class] </td>
+        <td> &lt;input [class]="classVar" &gt; <br />
+          classVar = property defined as typescript variable (*.component.ts)
+        </td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>[class.className] </td>
+        <td> &lt;input [class.txt-red]="isError" &gt;<br />
+          isError = property defined as boolean typescript variable (*.component.ts)
+        </td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>[ngClass] - Apply multiple classes conditionally or normally</td>
+        <td> &lt;input [ngClass]="myClasses" &gt;<br />
+          myClasses = property defined as boolean typescript variable (*.component.ts)<br />
+          myClasses = &#123; "txt-success": this.success, "special": this.special &#125;
+        </td>
+      </tr>
+    </table>
+  </li>
+  <li>
+    <table>
+      <th colspan="3">STYLE BINDING - Bind inline CSS style using angular to make ui dynamic</th>
+      <tr>
+        <td>1</td>
+        <td>[style.Property]="'colorName'" - <b>Direct</b></td>
+        <td>
+          &lt;h4 [style.color]="'red'"&gt; My color is RED &lt;/h4&gt;
+        </td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>[style.Property]="myColor" - <b>Using variable</b></td>
+        <td>
+          &lt;h4 [style.color]="myColor"&gt; My color is RED &lt;/h4&gt;<br />
+          myColor="orange"; (*.component.ts)
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>[style.Property]="conditionalExpression" - <b>Using expression</b></td>
+        <td>
+          &lt;h4 [style.color]="hasError ? 'red' : 'green'"&gt; My color is RED &lt;/h4&gt;<br />
+          hasError = true; (*.component.ts)
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>[ngStyle]="styleObjectVar" - <b>Using ngStyle</b></td>
+        <td>
+          &lt;h4 [ngStyle]="titleStule"&gt; My color is RED &lt;/h4&gt;<br />
+          titleStule = &#123; color: "blue" ; fontStyle: "italic" &#125; (*.component.ts)
+        </td>
+      </tr>
+    </table>
+  </li>
+  <li>
+    <table>
+      <th colspan="3">EVENT BINDING - Bind events using angular to make ui dynamic</th>
+      <tr>
+        <td colspan="3"><img class="img" src="assets/pics/binding.jpg"></td>
+      </tr>
+
+      <tr>
+        <td>1</td>
+        <td>(click) </td>
+        <td>&lt;input type="button" (click)="clickMe()" &gt;<br />
+          clickMe() &#123; console.log("I m clicked") &#125;
+        </td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>(click) with $event to send event information </td>
+        <td>&lt;input type="button" (click)="clickMe($event)" &gt;<br />
+          clickMe(event) &#123; console.log("I m clicked") &#125;
+        </td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>(click) inline expression </td>
+        <td>&lt;input type="button" (click)="myVar='Welcome Naveen'" &gt;<br />
+
+        </td>
+      </tr>
+    </table>
+  </li>
+
+  <li>
+    <table>
+      <th colspan="3">TEMPLATE REFERENCE VARIABLES - #varName</th>
+      <tr>
+        <td>1</td>
+        <td>#varName</td>
+        <td>&lt;input type="text" #myName &gt;<br />
+          &lt;input type="button" (click)="logMe(myName.value)" &gt; <br />
+          logMe(val)&#123; console.log(val); &#125;
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Output</td>
+        <td><input type="text" #myName class="txt" [(ngModel)]="txtVal">
+          <input type="button" (click)="logMe(myName.value)" class="btn" value="Log ME">
+        </td>
+      </tr>
+    </table>
+  </li>
+  <li>
+    <table>
+      <th colspan="3">TWO-WAY data binding - [(ngModel)] </th>
+      <tr>
+        <td colspan="3"><img class="img" src="assets/pics/twoway.jpg"></td>
+      </tr>
+      <tr>
+        <td colspan="3"><b>Requires FormsModule</b> (import FormsModule from '@angular/forms')</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>[(ngModel)]</td>
+        <td>&lt;input type="text" [(ngModel)]="nameVar" &gt;<br />
+          &lt;input type="button" (click)="logMe()" &gt; <br />
+          logMe(val)&#123; console.log(val); &#125;
+        </td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Output</td>
+        <td><input type="text" class="txt" [(ngModel)]="txtVal"> {{txtVal}}
+
+        </td>
+      </tr>
+    </table>
+  </li>
+  <li>
+    <table>
+      <th colspan="3">NGIF - *ngif </th>
+      <tr>
+        <td colspan="3">Render Ui conditionally</td>
+      </tr>
+      <tr>
+        <td colspan="3"><img class="img" src="assets/pics/ngif.jpg"></td>
+      </tr>
+    </table>
+  </li>
+  <li>
+    <table>
+      <th colspan="3">NGSWITCH - [ngSwitch] </th>
+      <tr>
+        <td colspan="3">Render Ui conditionally</td>
+      </tr>
+      <tr>
+        <td colspan="3"><img class="img" src="assets/pics/ngswitch.jpg"></td>
+      </tr>
+    </table>
+  </li>
+  <li>
+    <table>
+      <th colspan="3">Send Data to CHILD Component </th>
+      <tr>
+        <td>1</td>
+        <td>@Input </td>
+        <td>To recieve parent data in child component.ts file</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>&lt;app-sidebar [myParentData]="sendDataToChild"&gt;&lt;/app-sidebar&gt; </td>
+        <td>sendDataToChild:string in parent component</td>
+      </tr>
+    </table>
+  </li>
+  <li>
+      <table>
+        <th colspan="3">Send Data to PARENT Component </th>
+        <tr>
+          <td>1</td>
+          <td>@Output and eventemitter are used<br/>
+             @Output() public evenEmitter=new EventEmitter();<br/>
+            this.evenEmitter.emit("Hey");</td>
+          <td>To send data to parent from child component.ts file</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>&lt;app-sidebar [myParentData]="sendDataToChild"&gt;&lt;/app-sidebar&gt; </td>
+          <td>sendDataToChild:string in parent component</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Output:</td>
+            <td><button class="btn" (click)="fireEventToParent()">Emit Data To Parent</button></td>
+        </tr>
+      </table>
+    </li>
+</ul>
+<br />
